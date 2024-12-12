@@ -1,4 +1,6 @@
 import './App.css'
+import Carousel from './Components/Carousel'
+import Chillsbay from './Components/Chillsbay'
 import Hero from './Components/Hero_Area'
 import ImgSection from './Components/ImgSection'
 import NavbarSection from './Components/Navbar'
@@ -11,6 +13,8 @@ function App() {
     <Hero/>
     <ImgSection/>
     <ThingsToDo/>
+    <Chillsbay/>
+    <Carousel/>
     </>
   )
 }
