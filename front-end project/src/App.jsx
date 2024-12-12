@@ -2,6 +2,7 @@ import './App.css'
 import Hero from './Components/Hero_Area'
 import ImgSection from './Components/ImgSection'
 import NavbarSection from './Components/Navbar'
+import ThingsToDo from './Components/ThingsToDo'
 function App() {
 
   return (
@@ -9,6 +10,7 @@ function App() {
     <NavbarSection/>
     <Hero/>
     <ImgSection/>
+    <ThingsToDo/>
     </>
   )
 }
