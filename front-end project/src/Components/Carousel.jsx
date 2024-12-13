@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { FaTwitter } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import { button, Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 function Carousel() {
   const CarouselData = [
     {
@@ -64,7 +64,7 @@ function Carousel() {
   const handleClick = (index) => setCurrentIndex(index);
   return (
     <>
-      <section className="mx-[100px]">
+      <section className="md:mx-[50px] lg:mx-[100px]">
         <h1 className="text-center text-2xl lg:text-5xl text-normal mt-24 mb-12 font-semibold">
           See How People are Chilling On Chillsbay
         </h1>
@@ -72,7 +72,7 @@ function Carousel() {
           <div className="flex items-center justify-between">
             <button
               onClick={handlePrev}
-              className="absolute left-0 transform translate-x-6 flex items-center justify-center rounded-full text-6xl text-[#26395C] border-none outline-none"
+              className="absolute left-0 transform lg:translate-x-6 flex items-center justify-center rounded-full text-4xl md:text-5xl lg:text-6xl text-[#26395C] border-none outline-none"
             >
               <GoChevronLeft />
             </button>
@@ -106,7 +106,7 @@ function Carousel() {
                     </div>
                   ))}
                 </div>
-                <div className="md:w-1/2 flex flex-col md:flex-row items-center gap-4">
+                <div className="md:w-1/2 flex items-center gap-4">
                   <Button
                     color="primary"
                     variant="bordered"
@@ -131,7 +131,7 @@ function Carousel() {
 
             <button
               onClick={handleNext}
-              className="absolute right-0 transform translate-x-6 flex items-center justify-center rounded-full text-6xl text-[#26395C] border-none outline-none"
+              className="absolute right-0 transform lg:translate-x-6 flex items-center justify-center rounded-full text-4xl md:text-5xl lg:text-6xl text-[#26395C] border-none outline-none"
             >
               <GoChevronRight />
             </button>
