@@ -17,6 +17,9 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import MyModal from "./Dropdown/Modal";
+import ProfileDropdown from "./Dropdown/Dropdown";
+const value = true;
 function NavbarSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(null);
   const menuItem = [
@@ -64,27 +67,22 @@ function NavbarSection() {
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Dropdown>
-                <DropdownTrigger>
-                  <Button variant="none">
-                    Things to do{" "}
-                    <ChevronDownIcon className="text-[#0E8BFF] w-4 h-4" />
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu aria-label="Example with disabled actions">
-                  <DropdownItem key="new">Water Sports</DropdownItem>
-                  <DropdownItem key="copy">Day Parties</DropdownItem>
-                  <DropdownItem key="edit">Outdoors</DropdownItem>
-                  <DropdownItem key="edit">Rentals</DropdownItem>
-                  <DropdownItem
-                    key="delete"
-                    className="text-danger"
-                    color="danger"
-                  >
-                    Delete file
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
+            <Dropdown>
+      <DropdownTrigger>
+        <Button variant="none">
+          Things to do <ChevronDownIcon className="text-[#0E8BFF] w-4 h-4" />
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Example with disabled actions">
+        <DropdownItem key="new">Water Sports</DropdownItem>
+        <DropdownItem key="copy">Day Parties</DropdownItem>
+        <DropdownItem key="edit">Outdoors</DropdownItem>
+        <DropdownItem key="edit">Rentals</DropdownItem>
+        <DropdownItem key="delete" className="text-danger" color="danger">
+          Delete file
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
             </NavbarItem>
             <NavbarItem>
               <Link className="foreground">
@@ -92,18 +90,7 @@ function NavbarSection() {
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Dropdown>
-                <DropdownTrigger>
-                  <Button variant="none">
-                    <UserIcon className="text-[#26395C] w-7 h-7" /> Account
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu aria-label="Profile">
-                  <DropdownItem key="new">My Profile</DropdownItem>
-                  <DropdownItem key="copy">My History</DropdownItem>
-                  <DropdownItem key="edit">Sign Out</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
+            {value == true ? <MyModal/> : <ProfileDropdown/>}
             </NavbarItem>
             <NavbarItem>
               <Button color="primary">Contact Now</Button>
