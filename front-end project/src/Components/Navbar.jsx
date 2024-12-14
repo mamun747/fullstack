@@ -19,6 +19,8 @@ import {
 import { useState } from "react";
 import MyModal from "./Home/Modal";
 import ProfileDropdown from "./Home/Dropdown";
+import { NavLink } from "react-router";
+import Home from "./Home";
 const value = true;
 function NavbarSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(null);
@@ -46,25 +48,29 @@ function NavbarSection() {
 
           <NavbarContent className="sm:hidden pr-3">
             <NavbarBrand>
-              <img className="w-44" src="/Logo.png" alt="logo" />
-            </NavbarBrand>
+              <NavLink to="/"><img className="w-44" src="/Logo.png" alt="logo" /></NavLink>
+          </NavbarBrand>
           </NavbarContent>
 
           {/* Desktop Device */}
           <NavbarContent className="hidden sm:flex gap-4 w-full justify-center text-gray-950">
             <NavbarBrand>
-              <img src="/Logo.png" alt="" />
+              <NavLink to="/"><img src="/Logo.png" alt="" /></NavLink>
             </NavbarBrand>
             <NavbarItem>
-              <Link className="text-gray-950">Eat & Drink</Link>
+              <NavLink style={({isActive}) => ({
+                color: isActive ? "#0e8bff" : "black"
+              })} to="/drink" className="text-gray-950">Eat & Drink</NavLink>
             </NavbarItem>
             <NavbarItem>
-              <Link className="foreground">
-                Club{" "}
+              <NavLink style={({isActive}) => ({
+                color: isActive ? "#0e8bff" : "black"
+              })} to="/club" className="foreground">
+                Club
                 <sup className="bg-blue-500 p-2 rounded-2xl text-white text-[12px]">
                   Hot
                 </sup>
-              </Link>
+              </NavLink>
             </NavbarItem>
             <NavbarItem>
             <Dropdown>
