@@ -17,8 +17,8 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import MyModal from "./Dropdown/Modal";
-import ProfileDropdown from "./Dropdown/Dropdown";
+import MyModal from "./Home/Modal";
+import ProfileDropdown from "./Home/Dropdown";
 const value = true;
 function NavbarSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(null);
