@@ -1,6 +1,7 @@
 import './App.css'
 import Carousel from './Components/Carousel'
 import Chillsbay from './Components/Chillsbay'
+import Footer from './Components/Footer'
 import Gallary from './Components/Gallary'
 import Hero from './Components/Hero_Area'
 import ImgSection from './Components/ImgSection'
@@ -17,6 +18,7 @@ function App() {
     <Chillsbay/>
     <Carousel/>
     <Gallary/>
+    <Footer/>
     </>
   )
 }
